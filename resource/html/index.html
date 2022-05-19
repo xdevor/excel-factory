@@ -99,7 +99,7 @@
             })
             .then(response => response.json())
             .then(data => {
-              this.dataTypeOptions = data.data
+              this.dataTypeOptions = data.data.sort()
             })
             .catch(error => alert(error))
         },
@@ -110,7 +110,7 @@
             })
             .then(response => response.json())
             .then(data => {
-              this.sourceOptions = data.data
+              this.sourceOptions = data.data.sort()
             })
             .catch(error => alert(error))
         },
