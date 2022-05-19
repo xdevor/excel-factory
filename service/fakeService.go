@@ -89,6 +89,36 @@ func GetFakeData(dataType string) string {
 		return gofakeit.HexColor()
 	case "Number":
 		return strconv.Itoa(gofakeit.IntRange(0, 999999))
+	case "Language":
+		return gofakeit.Language()
+	case "ProgrammingLanguage":
+		return gofakeit.ProgrammingLanguage()
+	case "PetName":
+		return gofakeit.PetName()
+	case "Animal":
+		return gofakeit.Animal()
+	case "AppVersion":
+		return gofakeit.AppVersion()
+	case "Company":
+		return gofakeit.Company()
+	case "JobTitle":
+		return gofakeit.JobTitle()
+	case "CreditCardCvv":
+		return gofakeit.CreditCardCvv()
+	case "CreditCardExp":
+		return gofakeit.CreditCardExp()
+	case "BitcoinAddress":
+		return gofakeit.BitcoinAddress()
+	case "TimeZone":
+		return gofakeit.TimeZone()
+	case "Year":
+		return strconv.Itoa(gofakeit.Year())
+	case "Month":
+		return strconv.Itoa(gofakeit.Month())
+	case "WeekDay":
+		return gofakeit.WeekDay()
+	case "DateTime":
+		return gofakeit.Date().Format("2006-01-02 15:04:05")
 	default:
 		return gofakeit.Word()
 	}
