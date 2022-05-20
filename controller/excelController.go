@@ -11,7 +11,7 @@ import (
 func ExportFakeExcelFile(c *gin.Context) {
 	input, isValid := parseRequestPayload(c)
 	if !isValid || !validateExportFakeExcel(input) {
-		apiReturn(isValid, "", c)
+		apiReturn(false, "", c)
 		return
 	}
 
